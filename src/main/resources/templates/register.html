@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/image-index/favicon2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style/register.css">
+    <title>Dev Shoes</title>
+</head>
+
+<body>
+    <header>
+        <div class="conteiner">
+            <div class="area_logo">
+                <a href="../indexhome.html">
+                    <h1 class="nome_marca">Dev Shoes</h1>
+                </a>
+            </div>
+            <div class="menu">
+                <nav>
+                    <div class="menu_mobile" id="menu_key" onclick="menu()">
+                        <div class="mm_line"></div>
+                        <div class="mm_line"></div>
+                        <div class="mm_line"></div>
+                    </div>
+                    <ul id="list" class="list">
+                        <li><a href="product">Home</a></li>                      
+                        <li><a href="../about.html">Sobre</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section id="geral">
+        <div id="area_form">
+            <form method="POST">
+                <div id="first">
+                    <label id="name">
+                        Nome do Produto:
+                        <input type="text" name="nomeProduto" required>
+                    </label>
+                    <label id="amount">
+                        Quantidade:
+                        <input type="number" name="quantidade" required>
+                    </label>
+                </div>
+                <div id="bellow">
+                    <label id="price_tag">
+                        Valor:
+                        <input type="number" name="valor" required>
+                    </label>
+                    <label id="birth">
+                        Data da Venda:
+                        <input type="date" name="dataVenda" required>
+                    </label>
+                </div>
+                <div id="area_button">
+                    <input type="submit" value="Cadastrar" required>
+                </div>
+            </form>
+        </div>
+        <a href="indexHome">Home</a>
+    </section>
+    <footer>
+        <div class="conteiner">
+            <div id="area_footer">
+                <div class="area_logo">
+                    <h1 class="nome_marca">Dev Shoes</h1>
+                    <div id="bar_nome_logo"></div>
+                </div>
+                <div id="area_informacoes">
+                    <address>
+                        <div id="logradouro">
+                            <div id="title">Av.Piauí, 1089-705 - Luíz correia</div>
+                            <div id="sub_title">Buriti dos Lopes - PI, 64230-000</div>
+                        </div>
+                        <div id="contato">
+                            <div id="email">devshoes@gmail.com</div>
+                            <div id="numero">(86) 13009-1298</div>
+                        </div>
+                    </address>
+                    <div id="redes_sociais">
+                        <a href="#">
+                            <picture>
+                                <source media="(max-width: 450px)" srcset="../images/image-index/face2.png">
+                                <img src="../images/image-index/face.png" alt="icon facebook">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <source media="(max-width: 450px)" srcset="../images/image-index/insta2.png">
+                                <img src="../images/image-index/instagram.png" alt="icon instagram">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <source media="(max-width: 450px)" srcset="../images/image-index/twitter2.png">
+                                <img src="../images/image-index/twitter.png" alt="icon twitter">
+                            </picture>
+                        </a>
+                        <a href="#">
+                            <picture>
+                                <source media="(max-width: 450px)" srcset="../images/image-index/youtube2.png">
+                                <img src="../images/image-index/youtube.png" alt="icon youtube">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div id="copy">
+                   &copy; Dev Shoes by Group DevGuys
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/menu.js"></script>
+</body>
+
+</html>

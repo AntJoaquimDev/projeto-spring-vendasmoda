@@ -1,0 +1,149 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/image-index/favicon2.png" type="image/x-icon">
+     <link rel="stylesheet" href="./style/graphic.css">
+   
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+
+
+
+    <title>Dev Shoes</title>
+</head>
+
+<body>
+    <header>
+        <div class="conteiner">
+            <div class="area_logo">
+                <a href="../index.html">
+                    <h1 class="nome_marca">Dev Shoes</h1>
+                </a>
+            </div>
+            <div class="menu">
+                <nav>
+                    <div class="menu_mobile" id="menu_key" onclick="menu()">
+                        <div class="mm_line"></div>
+                        <div class="mm_line"></div>
+                        <div class="mm_line"></div>
+                    </div>
+                    <ul id="list" class="list">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../conteudo/login.html">Login</a></li>
+                        <li><a href="../conteudo/about.html">Sobre</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section id="geral">
+        <div id="area_graphic">
+            <div id="grafic">
+               
+		<h2 align="center">Gráfico de Vendas</h2>
+
+		<div id="container" style="width: 550px; height: 400px; margin: 0 auto"></div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+	<script th:inline="javascript">
+		$(function () {
+			Highcharts.chart('container', {
+				chart: {
+					type: 'column'
+				},
+				title: {
+					text: 'Trabalho Prof. Ricardo'
+				},
+				subtitle: {
+					text: 'Grafico da Moda-Vendas'
+				},
+				xAxis: {
+					categories: [[${name}]],
+					crosshair: true
+				},
+				yAxis: {
+					min: 0,
+					max: 100,
+					title: {
+						text: 'Moda Vendida'
+					}
+				},
+				tooltip: {
+					headerFormat: '<span style="font-size:15px">{point.key}</span><table>',
+					pointFormat: '<tr><td style="color:{series.color=red};padding:0">{series.name}: </td>' +
+						'<td style="padding:0"><b>{point.y:.0f} Un.</b></td></tr>',
+					footerFormat: '</table>',
+					shared: true,
+					useHTML: true
+				},
+				plotOptions: {
+					column: {
+						pointPadding: 0.2,
+						borderWidth: 05
+					}
+				},
+				series: [{
+					name: 'Qtd_Vendida',
+					data: [[${values}]]
+				}]
+			});
+		});
+	</script>
+
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="conteiner">
+            <div id="area_footer">
+                <div class="area_logo">
+                    <h1 class="nome_marca">Dev Shoes</h1>
+                    <div id="bar_nome_logo"></div>
+                </div>
+                <div id="area_informacoes">
+                    <address>
+                        <div id="logradouro">
+                            <div id="title">Av.Piauí, 1089-705 - Luíz correia</div>
+                            <div id="sub_title">Luís Correia - PI, 64220-000</div>
+                        </div>
+                        <div id="contato">
+                            <div id="email">devshoes@gmail.com</div>
+                            <div id="numero">(86) 13009-1298</div>
+                        </div>
+                    </address>
+                    <div id="redes_sociais">
+                        <a href="#">
+                            <img src="../images/image-index/face.png" alt="icon facebook">
+                        </a>
+                        <a href="#">
+                            <img src="../images/image-index/instagram.png" alt="icon instagram">
+                        </a>
+                        <a href="#">
+                            <img src="../images/image-index/twitter.png" alt="icon twitter">
+                        </a>
+                        <a href="#">
+                            <img src="../images/image-index/youtube.png" alt="icon youtube">
+                        </a>
+                    </div>
+                </div>
+                <div id="copy">
+                    &copy; Dev Shoes by Group DevGuys
+                </div>
+           
+        </div>
+    </footer>
+    <script src="../js/menu.js"></script>
+</body>
+
+</html>

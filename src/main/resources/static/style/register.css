@@ -1,0 +1,514 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Markazi+Text:wght@500&family=Playfair+Display+SC:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Hanuman&family=Markazi+Text:wght@500&family=Playfair+Display+SC:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap');
+
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --header-back: #dddddd, #f9f9f9; 
+    --footer-back: #cccccc, #eeeeee;
+    --principal-color: #444444;
+    --principal-area-text: #ffffff;
+    --font-size-title: 30px;
+    --font-size-comum: 18px;
+    --color-information: #222222;
+    --body-back: #f0f0f0;
+    --principal-back: #f5f5f5;
+ }
+ 
+body{
+    background-color: var(--body-back);
+}
+
+body a{
+    text-decoration: none;
+}
+ 
+header {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, var(--header-back));
+    padding: 30px;
+}
+
+.conteiner {
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+    align-items: center;
+}
+
+.nome_marca {
+    color: var(--principal-color);
+    font-size: var(--font-size-title);
+    font-family: 'Playfair Display SC', serif;
+}
+
+header nav a {
+    color: var(--principal-color);
+    text-transform: uppercase;
+    padding: 15px;
+    transition: 0.5s;
+    font-family: 'Markazi Text', serif;
+    font-size: 20px;
+}
+
+header nav a:hover {
+    background-color: var(--principal-area-text);
+    border-radius: 9px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+
+nav ul, nav li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul{
+    display: flex;
+}
+
+
+.menu_mobile{
+    display: none;
+    width: 40px;
+    height: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-right: 20px;
+}
+
+.mm_line{
+    background-color: #39aae1;
+    height: 3px;
+}
+
+
+#geral {
+    min-width: 600px;
+    max-width: 2000px;
+    margin: auto;
+}
+
+#area_form{
+    margin: 30px auto 0px auto;
+    width: 75%;
+    padding-top: 25px;
+    padding-bottom: 50px;
+    background-color: var(--principal-back);
+}
+
+form{
+    width: 100%;
+}
+
+#first, #bellow{
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+label{
+    font-size: 18px;
+    color: #000000;
+    font-family: 'Old Standard TT', serif;
+}
+
+input{
+    display: block;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: transparent;
+    outline: 0px;
+    border: 0px;
+    border-bottom: 1px solid #aaa;
+}
+
+#name{
+    width: 60%;
+}
+
+#amount{
+    width: 20%;
+}
+
+#price_tag{
+    width: 35%;
+}
+
+#birth{
+    width: 29%;
+}
+
+#first, #bellow{
+    width: 90%;
+}
+
+
+input[type="text"]{
+    font-family: 'Old Standard TT', serif;
+}
+
+#first input[type="text"], input[type="number"], #bellow input[type="number"], input[type="date"]{
+    width: 100%;
+}
+
+input[type="text"], #bellow input[type="number"]{
+    font-size: 20px;
+    color: #444;
+}
+
+input[type="number"], input[type="date"]{
+    font-size: 18px;
+    color: #444;
+}
+
+input[type="date"]{
+    font-size: 15px;
+}
+
+#area_button{
+    display: flex;
+    justify-content: center;
+    margin-top: 165px;
+}
+
+#area_button input[type="submit"]{
+    padding: 25px;
+    width: 30%;
+    border: 1px solid #aaa;
+    background-color: #ddd;
+    font-size: 20px;
+    font-family: 'Old Standard TT', serif;
+}
+
+#area_button input[type="submit"]:hover{
+    border: 1px solid #bbb;
+    background-color: #e2e2e2;
+}
+
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right, var(--footer-back));
+}
+
+footer .nome_marca {
+    width: 15%;
+}
+
+#area_footer {
+    width: 100%;
+}
+
+.area_logo {
+    padding: 5px;
+}
+
+#bar_nome_logo {
+    height: 2px;
+    width: 160px;
+    background-color: var(--color-information);
+    margin-bottom: 10px;
+}
+
+#area_informacoes {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #888888;
+}
+
+address {
+    color: var(--color-information);
+    display: flex;
+    justify-content: space-between;
+    width: 35%;
+    margin-bottom: 20px;
+    font-size: var(--font-size-comum);
+    font-family: 'Hanuman', serif;
+}
+
+#redes_sociais a {
+    padding: 5px;
+}
+
+#copy {
+    padding-top: 15px;
+    font-size: var(--font-size-comum);
+    color: var(--principal-color);
+    font-family: 'Hanuman', serif;
+}
+
+
+@media(max-width: 1200px){
+    #logradouro, #contato{
+        font-size: 15px;
+    }
+}
+
+
+@media(max-width: 800px){
+
+    footer .nome_marca{
+        font-size: 25px;
+    }
+
+    address, #copy{
+        font-size: 15px;
+    }
+
+    label{
+        font-size: 20px;
+    }
+
+    input{
+        margin-bottom: 30px;
+    }
+    #area_button{
+        margin-top: 50px;
+    }
+
+    #area_button input[type="submit"]{
+        padding: 20px;
+        width: 30%;
+        font-size: 12px;
+    }
+
+    footer .nome_marca{
+        font-size: 24px;
+    }
+
+    #bar_nome_logo{
+        width: 130px;
+    }
+
+    address {
+        width: 35%;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 700px){
+    footer .nome_marca{
+        font-size: 20px;
+    }
+    nav ul{
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        left: 0px;
+        width: 100%;
+        background-color: #FFF;
+    }
+    .menu_mobile{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+
+    .list li{
+        color: var(--principal-color);
+        text-transform: uppercase;
+        padding: 15px;
+        transition: 0.5s;
+    }
+
+    #area_informacoes {
+        width: 100%;
+    }
+    
+    #name{
+        width: 60%;
+    }
+    
+    #amount{
+        width: 15%;
+    }
+    
+    #price_tag{
+        width: 20%;
+    }
+    
+    #birth{
+        width: 40%;
+    }
+
+    #first, #bellow{
+        width: 90%;
+    }
+    
+    label{
+        font-size: 14px;
+    }
+
+    input{
+        margin-bottom: 30px;
+    }
+
+    #area_button{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    #area_button input[type="submit"]{
+        padding: 20px;
+        width: 30%;
+        border: 1px solid #aaa;
+        background-color: #ddd;
+        font-size: 12px;
+    }
+
+}
+
+@media(max-width: 650px){
+
+    #bar_nome_logo {
+        width: 90px;
+    }
+    footer .nome_marca{
+        font-size: 15px;
+    } 
+
+    #name, #amount, #price_tag, #birth{
+        width: 40%;
+    }
+    
+    label{
+        font-size: 12px;
+    }
+
+    input[type="date"]{
+        font-size: 13px;
+    }
+
+    #area_button input[type="submit"]{
+        font-size: 10px;
+        width: 45%;
+    }
+}
+
+@media(max-width: 450px){
+    footer .nome_marca{
+        font-size: 12px;
+    }
+    #bar_nome_logo {
+        width: 70px;
+    }
+    address{
+        font-size: 10px;
+    }
+
+    #geral{
+        min-width: 420px;
+    }
+
+    label{
+        font-size: 12px;
+    }
+
+    #name{
+        width: 60%; 
+    }
+    #amount{
+        width: 20%;
+    }
+    #price_tag{
+        width: 30%;
+    }
+
+    #birth{
+        width: 45%;
+    }
+
+    form{
+        width: 90%;
+    }
+
+    #first input[type="text"], input[type="number"], #bellow input[type="number"], input[type="date"]{
+        font-size: 10px;
+    }
+    
+}
+
+
+@media(max-width: 375px){
+    footer .nome_marca{
+        font-size: 11px;
+    }
+    #bar_nome_logo {
+        width: 60px;
+    }
+
+    #geral{
+        min-width: 370px;
+    }
+
+    label{
+        font-size: 9px;
+    }
+
+
+    #price_tag{
+        width: 30%;
+    }
+
+    #birth{
+        width: 50%;
+    }
+
+    form{
+        width: 90%;
+    }
+
+    #logradouro, #contato{
+        font-size: 10px;
+    }
+}
+
+@media(max-width: 350px){
+    footer .nome_marca{
+        font-size: 9px;
+    }
+    #bar_nome_logo {
+        width: 50px;
+    }
+    address{
+        font-size: 8px;
+    }
+
+    #geral{
+        min-width: 300px;
+    }
+    
+    label{
+        font-size: 10px;
+    }
+   
+    #area_button input[type="submit"]{
+        font-size: 10px;
+        width: 50%;
+    }
+
+    #price_tag{
+        width: 25%;
+    }
+
+    #birth{
+        width: 58%;
+    }
+}
