@@ -109,6 +109,10 @@ nav ul{
     background-color: var(--principal-back);
 }
 
+.grafico_real{
+	width:100%;
+}
+
 footer {
     padding: 20px;
     margin-top: 20px;

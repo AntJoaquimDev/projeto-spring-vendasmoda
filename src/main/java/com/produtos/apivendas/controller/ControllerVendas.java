@@ -25,6 +25,7 @@ public class ControllerVendas {
 	@Autowired
 	private ServiceVendas serviceVendas;
 
+	
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String formVendas() {
 		return "register";
